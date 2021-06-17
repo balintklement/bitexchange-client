@@ -23,7 +23,7 @@ export class LoadBalanceForm extends Component {
         formSubmitEvent.preventDefault()
 
         console.log("You load: ", this.state.amount, this.state.selectedCcy)
-        const headers = {"customer-token": "UagsbttHPk", 'Content-Type': 'application/json'};
+        const headers = {"customer-token": this.props.token, 'Content-Type': 'application/json'};
         const requestBody = JSON.stringify({
             amount: this.state.amount,
             currency: this.state.selectedCcy,

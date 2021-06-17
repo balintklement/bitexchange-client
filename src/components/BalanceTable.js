@@ -10,8 +10,7 @@ export class BalanceTable extends Component {
     }
 
     componentDidMount() {
-        console.log("component did mount")
-        const headers = {"customer-token": "UagsbttHPk"};
+        const headers = {"customer-token": this.props.token};
         fetch('http://localhost:8080/customers/balance', {headers})
             .then(res => res.json())
             .then((data) => {
