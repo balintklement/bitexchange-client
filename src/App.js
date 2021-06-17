@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import {Component} from "react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/*<header className="App-header"> Welcome to Bit-Exchange! </header>*/}
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+            <strong>register</strong><br />
+            name <input type="text" /><br />
+            <button>register</button>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <p>
+            <table className="Balance-table">
+                <thead>
+                <tr>
+                    <th colSpan={2}>balance</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>$</td>
+                    <td>1300</td>
+                </tr>
+                <tr>
+                    <td>BTC</td>
+                    <td>0.035</td>
+                </tr>
+                </tbody>
+            </table>
+        </p>
+
+        <p>
+            <strong>load balance</strong><br />
+            <label><input type="radio" id="radio_btn_usd" name="load_ccy" checked />USD</label><br />
+            <label><input type="radio" id="radio_btn_btc" name="load_ccy" />BTC</label><br />
+            amount <input type="text" /><br />
+            <button>load</button>
+        </p>
     </div>
   );
 }
